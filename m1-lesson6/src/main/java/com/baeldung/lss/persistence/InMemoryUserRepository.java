@@ -21,6 +21,7 @@ public class InMemoryUserRepository implements UserRepository {
 
     @Override
     public User save(User user) {
+
         Long id = user.getId();
         if (id == null) {
             id = counter.incrementAndGet();
